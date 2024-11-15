@@ -4,7 +4,6 @@ import Image from 'next/image';
 function AboutUs() {
   return (
     <div className="about-container">
-      
       <section className="hero">
         <div className="hero-content">
           <h1>About Us</h1>
@@ -19,29 +18,27 @@ function AboutUs() {
         </p>
       </section>
 
-  
       <section className="team-section">
         <h2>Meet Our Team</h2>
         <div className="team-members">
           <div className="team-member">
-            <Image src="images1.jpg" alt="Team Member 1" />
+            <Image src="/images1.jpg" alt="Team Member 1" width={150} height={150} />
             <h3>Jane Doe</h3>
             <p>CEO & Founder</p>
           </div>
           <div className="team-member">
-            <Image src="/images2.jpg" alt="Team Member 2" />
+            <Image src="/images2.jpg" alt="Team Member 2" width={150} height={150} />
             <h3>John Smith</h3>
             <p>Chief Technology Officer</p>
           </div>
           <div className="team-member">
-            <Image src="/images3.jpg" alt="Team Member 3" />
+            <Image src="/images3.jpg" alt="Team Member 3" width={200} height={200} />
             <h3>Sarah Lee</h3>
             <p>Lead Designer</p>
           </div>
         </div>
       </section>
 
-    
       <section className="values-section">
         <h2>Our Values</h2>
         <p>We believe in integrity, creativity, and delivering exceptional value to our clients.</p>

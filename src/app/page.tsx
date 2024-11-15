@@ -11,22 +11,22 @@ export default function Home() {
 <ul>
   <li>
     <Link href="/">
-      <a>Home</a>
+      Home
     </Link>
   </li>
   <li>
     <Link href="/about">
-      <a>About</a>
+      About
     </Link>
   </li>
   <li>
     <Link href="/services">
-      <a>Services</a>
+      Services
     </Link>
   </li>
   <li>
     <Link href="/contact">
-      <a>Contact</a>
+      Contact
     </Link>
   </li>
 </ul>
@@ -44,10 +44,10 @@ export default function Home() {
 
     
       <div className="pictures">
-        <div><Image src="/pic-1.png" alt="First image" /></div>
-        <div><Image src="/pic-2.png" alt="Second image" /></div>
-        <div><Image src="/pic-3.png" alt="Third image" /></div>
-        <div><Image src="/pic-4.png" alt="Fourth image" /></div>
+        <div><Image src="/pic-1.png" alt="First image"  width={60} height={60}/></div>
+        <div><Image src="/pic-2.png" alt="Second image"  width={60} height={60} /></div>
+        <div><Image src="/pic-3.png" alt="Third image"  width={60} height={50} /></div>
+        <div><Image src="/pic-4.png" alt="Fourth image"  width={60} height={60} /></div>
       </div>
 
       </div>
