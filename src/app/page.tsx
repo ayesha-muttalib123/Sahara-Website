@@ -1,13 +1,36 @@
+import Image from 'next/image';
+import Link from 'next/link';
 export default function Home() {
   return (
     <div className="container">
       {/* Navigation Bar */}
       <nav className="navbar">
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/services">Services</a></li>
-          <li><a href="/contact">Contact</a></li>
+        import Link from 'next/link';
+
+<ul>
+  <li>
+    <Link href="/">
+      <a>Home</a>
+    </Link>
+  </li>
+  <li>
+    <Link href="/about">
+      <a>About</a>
+    </Link>
+  </li>
+  <li>
+    <Link href="/services">
+      <a>Services</a>
+    </Link>
+  </li>
+  <li>
+    <Link href="/contact">
+      <a>Contact</a>
+    </Link>
+  </li>
+</ul>
+
         </ul>
       </nav>
 
@@ -21,10 +44,10 @@ export default function Home() {
 
     
       <div className="pictures">
-        <div><img src="/pic-1.png" alt="First image" /></div>
-        <div><img src="/pic-2.png" alt="Second image" /></div>
-        <div><img src="/pic-3.png" alt="Third image" /></div>
-        <div><img src="/pic-4.png" alt="Fourth image" /></div>
+        <div><Image src="/pic-1.png" alt="First image" /></div>
+        <div><Image src="/pic-2.png" alt="Second image" /></div>
+        <div><Image src="/pic-3.png" alt="Third image" /></div>
+        <div><Image src="/pic-4.png" alt="Fourth image" /></div>
       </div>
 
       </div>
