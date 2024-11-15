@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 function AboutUs() {
   return (
@@ -23,17 +24,17 @@ function AboutUs() {
         <h2>Meet Our Team</h2>
         <div className="team-members">
           <div className="team-member">
-            <img src="images1.jpg" alt="Team Member 1" />
+            <Image src="images1.jpg" alt="Team Member 1" />
             <h3>Jane Doe</h3>
             <p>CEO & Founder</p>
           </div>
           <div className="team-member">
-            <img src="/images2.jpg" alt="Team Member 2" />
+            <Image src="/images2.jpg" alt="Team Member 2" />
             <h3>John Smith</h3>
             <p>Chief Technology Officer</p>
           </div>
           <div className="team-member">
-            <img src="/images3.jpg" alt="Team Member 3" />
+            <Image src="/images3.jpg" alt="Team Member 3" />
             <h3>Sarah Lee</h3>
             <p>Lead Designer</p>
           </div>
