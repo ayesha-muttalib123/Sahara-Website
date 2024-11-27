@@ -1,9 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
+import Footer from '../components/Footer';
 
 const Services = () => {
   return (
-    <div className="services-container">
+<>
+
+<div className="services-container">
       <h2>Our Services</h2>
       <p>We offer a range of services to meet your needs.</p>
       <div className="service-cards">
@@ -23,7 +26,12 @@ const Services = () => {
           <p>Immerse yourself in local traditions and learn about the Saharan lifestyle.</p>
         </div>
       </div>
+     
     </div>
+     <Footer/>
+
+
+</>
   );
 };
 

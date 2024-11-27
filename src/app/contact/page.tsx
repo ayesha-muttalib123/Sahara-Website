@@ -1,19 +1,54 @@
-import React from 'react';
+'use client';  // Add this line to mark the component as a Client Component
 
+import React, { useState } from 'react';
+import Footer from '../components/Footer';
 
 const ContactUs = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    alert('Message Sent!');
+    // Here you would typically send the data to a server
+  };
+
   return (
-    <div className="contact-container">
+<>
+
+<div className="contact-container">
       <h2>Contact Us</h2>
       <p>We would love to hear from you! Please fill out the form below.</p>
-      <form className="contact-form">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message"  required></textarea>
+      <form className="contact-form" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Your Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+        />
+        <input
+          type="email"
+          placeholder="Your Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <textarea
+          placeholder="Your Message"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          required
+        ></textarea>
         <button type="submit">Send Message</button>
       </form>
+     
     </div>
+     {/* <Footer/> */}
+
+</>
   );
 };
-export default ContactUs
 
+export default ContactUs;
