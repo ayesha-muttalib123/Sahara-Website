@@ -321,6 +321,7 @@ import Aqua from "./components/Aqua";
 import Features from "./components/Features";
 import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
+import Navbar from "./components/Navbar";
 import Partners from "./components/Partners";
 import Services from "./components/Services";
 
@@ -328,7 +329,8 @@ import Services from "./components/Services";
 
 export default function Home() {
   return (
-    <main className='h-screen'>
+    <main className='main-class'>
+      
       <HeroSection />
       <Partners />
     <Services/>

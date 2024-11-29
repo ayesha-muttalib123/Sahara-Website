@@ -18,7 +18,17 @@ body {
   background-color: #f8f8f8;
   color: #4f5155;
 }
-
+/* parent contact  */
+.parent-contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+.child-footer{
+  position: sticky;
+  margin-top: 100%;
+}
 /* Hero Section */
 .hero {
   background-image: url('/Desktop.png');
@@ -33,6 +43,11 @@ body {
   color: white;
   padding: 0 20px;
 }
+
+
+
+
+
 
 .hero h1 {
   font-size: 4em;
@@ -59,6 +74,25 @@ body {
 .hero button:hover {
   background-color: #d12a00;
 }
+
+
+
+/* about here section*/
+.about-hero {
+  background-image: url('/background.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  opacity: 90%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
 
 /* Partners Section */
 .partners {
@@ -143,12 +177,10 @@ body {
   margin-top: 15px;
 }
 
-
 /* Features Section */
 .features-section {
-  padding: 20px;
   padding: 80px 20px;
-  background-color: #FAF3DD80; /* Light background for contrast */
+  background-color: #faf3dd80; /* Light background for contrast */
   text-align: left;
 }
 
@@ -216,6 +248,38 @@ body {
   line-height: 1.6;
 }
 
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  /* Stack layout vertically for medium screens */
+  .features {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .features-left {
+    text-align: center; /* Center align text for smaller screens */
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-heading {
+    font-size: 2rem; /* Slightly smaller heading on smaller screens */
+  }
+
+  .features-left {
+    font-size: 0.9rem; /* Reduce text size for small screens */
+    max-width: 100%; /* Allow full-width text */
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr; /* Single column for very small screens */
+    gap: 20px; /* Smaller gap between cards */
+  }
+}
+
+
 /* Events Section */
 .events {
   padding: 50px;
@@ -236,10 +300,12 @@ body {
   margin-bottom: 20px;
 }
 
-/* Contact Section */
+/* Contact Section
+
 .contact {
-  padding: 50px;
+  padding: 10px;
   text-align: center;
+
   background-color: #ffffff;
 }
 
@@ -265,7 +331,7 @@ body {
 .contact-info p {
   font-size: 1.1em;
   color: #777;
-}
+} */
 
 .call-us-button {
   background-color: #f0a500;
@@ -287,6 +353,9 @@ footer {
   background-color: #333;
   color: white;
   text-align: center;
+margin-bottom: auto;
+  
+
 }
 
 footer p {
@@ -469,8 +538,11 @@ footer .footer-bottom p {
   position: fixed;
   top: 0;
   left: -250px;
+  /* right: -100%; */
+  overflow-x: hidden;
+
   height: 100%;
-  width: 250px;
+  width: 200px;
   background-color: #222;
   color: white;
   overflow-y: auto;
@@ -484,13 +556,19 @@ footer .footer-bottom p {
 .sidebar.open {
   left: 0;
 }
+.main-class{
+  height:100% ;
+  width: 100%;
+}
 
 .close-btn {
   background: none;
   border: none;
   color: white;
+  right: 0;
+  /* left: 0; */
   font-size: 2rem;
-  align-self: flex-end;
+  /* align-self: flex-end; */
   cursor: pointer;
 }
 
@@ -502,7 +580,7 @@ footer .footer-bottom p {
 }
 
 .sidebar-menu li {
-  margin: 15px 0;
+  margin: 20px 0;
 }
 
 .sidebar-menu a {
@@ -512,6 +590,7 @@ footer .footer-bottom p {
 }
 
 .sidebar-menu a:hover {
+  background-color: #4f5155;
   text-decoration: underline;
 }
 
@@ -524,6 +603,12 @@ footer .footer-bottom p {
   .navbar-menu {
     display: none;
   }
+  .sidebar-menu li {
+  margin: 20px 0;
+  padding-left: 0;
+  margin-left: 0%;
+}
+
 
 
 
@@ -534,11 +619,18 @@ footer .footer-bottom p {
 }
 
 /* Contact Us Section */
+.contact-parent{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .contact-container {
   align-items: center;
+  /* margin-top: 20p; */
  
   max-width: 800px;
-  margin: 0 auto;
+  margin: 10 auto;
   padding: 50px 20px;
   text-align: center;
   background-color: #f9f9f9;
@@ -605,7 +697,6 @@ footer .footer-bottom p {
 
 
 
-
 /* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
   .services .service-cards,
@@ -619,9 +710,13 @@ footer .footer-bottom p {
     flex-basis: 100%;
     margin-bottom: 30px;
   }
-
+.contact-container{
+  margin-top: 20%;
+  
+}
   .contact-info {
     flex-direction: column;
+    
   }
 
   .contact-info div {
@@ -737,4 +832,117 @@ footer .footer-bottom p {
   color: #555;
   max-width: 700px;
   margin: 0 auto;
+}
+
+
+
+
+
+
+
+/* responsiveness */
+/* Extra small devices (phones, <576px) */
+@media (max-width: 575px) {
+  .hero {
+    height: 70vh;
+    padding: 20px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .services-heading {
+    font-size: 2rem;
+  }
+
+  .service-card {
+    min-height: 300px;
+  }
+
+  .navbar {
+    padding: 10px;
+  }
+
+  .navbar-logo a {
+    font-size: 1.2rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small devices (tablets, 576px and up) */
+@media (max-width: 768px) {
+  .service-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .navbar-menu a {
+    font-size: 0.9rem;
+  }
+
+  .contact-info div {
+    margin-bottom: 20px;
+  }
+  .contact-parent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+}
+
+/* Medium devices (desktops, 768px and up) */
+@media (max-width: 992px) {
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .service-card {
+    padding: 20px;
+    min-height: 350px;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 1200px) {
+  .service-card {
+    max-width: 400px;
+  }
+
+  .navbar-logo a {
+    font-size: 1.3rem;
+  }
+
+  .hero button {
+    padding: 10px 25px;
+  }
 }

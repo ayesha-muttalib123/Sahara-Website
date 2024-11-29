@@ -1,14 +1,17 @@
 import React from 'react';
 import Image from 'next/image';
 import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
 
 const Services = () => {
   return (
 <>
 
 <div className="services-container">
+  <Navbar/>
       <h2>Our Services</h2>
       <p>We offer a range of services to meet your needs.</p>
+      <br />
       <div className="service-cards">
         <div className="service-card">
           <Image src="/pic-1.png" alt="Camel Riding" className="service-image" width={300} height={200} />

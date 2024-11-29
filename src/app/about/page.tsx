@@ -1,15 +1,16 @@
 import React from 'react';
 import Image from 'next/image';
 import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
 
 function AboutUs() {
   return (
 <>
 
-
+<Navbar/>
 <div className="about-container">
       {/* Hero Section */}
-      <section className="hero">
+      <section className="about-hero">
         <div className="hero-content">
           <h1 className="hero-title">About Sahara Group</h1>
           <p className="hero-description">

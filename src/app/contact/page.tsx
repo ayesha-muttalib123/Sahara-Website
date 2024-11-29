@@ -1,6 +1,8 @@
 'use client';  // Add this line to mark the component as a Client Component
 
 import React, { useState } from 'react';
+// import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 const ContactUs = () => {
@@ -17,7 +19,9 @@ const ContactUs = () => {
   return (
 <>
 
+<div className='parent-contact'>
 <div className="contact-container">
+  <Navbar/>
       <h2>Contact Us</h2>
       <p>We would love to hear from you! Please fill out the form below.</p>
       <form className="contact-form" onSubmit={handleSubmit}>
@@ -45,7 +49,10 @@ const ContactUs = () => {
       </form>
      
     </div>
-     {/* <Footer/> */}
+ <div className='child-footer'>
+ <Footer/>
+ </div>
+</div>
 
 </>
   );
