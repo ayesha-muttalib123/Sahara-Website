@@ -10,10 +10,12 @@
 * {
   margin: 0;
   padding: 0;
+ 
   box-sizing: border-box;
 }
 
 body {
+  padding-top: 8%;
   font-family: Arial, sans-serif;
   background-color: #f8f8f8;
   color: #4f5155;
@@ -177,6 +179,78 @@ body {
   margin-top: 15px;
 }
 
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .services-container {
+    padding: 50px 20px; /* Reduced padding for smaller screens */
+  }
+
+  .services-heading {
+    font-size: 2.5rem; /* Adjust heading size */
+  }
+
+  .services-description {
+    font-size: 1.2rem; /* Smaller description text */
+    margin-bottom: 30px;
+  }
+
+  .service-cards {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust column width for tablets */
+    gap: 20px; /* Smaller gap between cards */
+  }
+
+  .service-card {
+    padding: 20px; /* Compact padding */
+    max-width: 100%; /* Allow cards to fill available space */
+    min-height: 350px; /* Reduce height slightly */
+  }
+
+  .service-card h3 {
+    font-size: 1.6rem; /* Adjust card heading size */
+  }
+
+  .service-card p {
+    font-size: 1rem; /* Adjust card text size */
+  }
+}
+
+@media (max-width: 480px) {
+  .services-container {
+    padding: 40px 15px; /* Further reduce padding for small screens */
+  }
+
+  .services-heading {
+    font-size: 2rem; /* Smaller heading for mobile */
+  }
+
+  .services-description {
+    font-size: 1rem; /* Adjust description size */
+  }
+
+  .service-cards {
+    grid-template-columns: 1fr; /* Single column layout for mobile */
+    gap: 15px; /* Compact spacing */
+  }
+
+  .service-card {
+    padding: 15px; /* Smaller padding inside cards */
+    min-height: 300px; /* Further reduce card height */
+  }
+
+  .service-image {
+    max-height: 200px; /* Limit image height further */
+  }
+
+  .service-card h3 {
+    font-size: 1.4rem; /* Adjust heading size for mobile */
+  }
+
+  .service-card p {
+    font-size: 0.9rem; /* Adjust text size */
+  }
+}
+
+
 /* Features Section */
 .features-section {
   padding: 80px 20px;
@@ -267,15 +341,66 @@ body {
   .features-heading {
     font-size: 2rem; /* Slightly smaller heading on smaller screens */
   }
-
+  .feature-card {
+    background: white;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
+  }
   .features-left {
-    font-size: 0.9rem; /* Reduce text size for small screens */
-    max-width: 100%; /* Allow full-width text */
+    font-size: 0.5rem; /* Reduce text size for small screens */
+    max-width: 80%; /* Allow full-width text */
   }
 
   .features-grid {
     grid-template-columns: 1fr; /* Single column for very small screens */
     gap: 20px; /* Smaller gap between cards */
+  }
+}
+
+/* For devices equal to 378px width */
+@media (max-width: 400px) {
+  .features-section {
+    padding: 50px 10px; /* Reduce padding for small screens */
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Smaller gap */
+  }
+
+  .features-left {
+    font-size: 0.8rem; /* Smaller font size for readability */
+    max-width: 100%; /* Use full width */
+    text-align: center; /* Center align text */
+  }
+
+  .features-heading {
+    font-size: 1.8rem; /* Smaller heading size */
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 15px; /* Compact spacing between cards */
+  }
+
+  .feature-card {
+    padding: 15px; /* Compact card padding */
+    font-size: 0.9rem; /* Slightly smaller font for content */
+  }
+
+  .feature-count {
+    font-size: 1.5rem; /* Reduce size for count text */
+  }
+
+  .feature-description {
+    font-size: 0.9rem; /* Slightly smaller text */
+    line-height: 1.4;
   }
 }
 
